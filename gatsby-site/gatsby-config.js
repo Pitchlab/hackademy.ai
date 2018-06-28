@@ -28,17 +28,10 @@ module.exports = {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
         fonts: [
-          `Roboto`,
-          `source sans pro\:300,400,400i,700` // you can also specify font weights and styles
-        ]
-      }
-    },
-    {
-      resolve: `gatsby-plugin-google-fonts`,
-      options: {
-        fonts: [
-          `Roboto Mono`,
-          `source sans pro\:300,400,400i,700` // you can also specify font weights and styles
+          'Roboto',
+          'Roboto\:300,400,400i,700', // you can also specify font weights and styles
+          'Roboto Mono',
+          'Roboto+Mono\:300,400,400i,700' // you can also specify font weights and styles
         ]
       }
     }

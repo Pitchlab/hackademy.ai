@@ -46,10 +46,10 @@ class IndexPage extends React.Component {
       <div className="site">
         <div className="wrapper">
           <h1>Hackademy.ai</h1>
-          <h2>edition #1: <a className="purple" href="https://aiyprojects.withgoogle.com/">facial recognition</a> with <a className="pink" href="https://aiyprojects.withgoogle.com/">Google AIY</a></h2>
+          <h2>edition #1: <a href="https://aiyprojects.withgoogle.com/">facial recognition</a> with <a href="https://aiyprojects.withgoogle.com/">Google AIY</a></h2>
           <div>
-            <button className="red" onClick={this.handle_signup}>Sign up</button>
-            <button onClick={this.handle_download}>Download Guide</button>
+            <button className="red button" onClick={this.handle_signup}><span>Sign up</span></button>
+            <button className="button" onClick={this.handle_download}><span>Download Guide</span></button>
           </div>
           <div className="code">
             <ul>
@@ -97,10 +97,10 @@ class IndexPage extends React.Component {
           <div className="links">
             <ul>
               <li>
-                <a href="https://facebook.com/hackademy_ai"><img src={facebook_icon} alt="facebook" /></a>
+                <a href="https://facebook.com/ai.hackademy"><img src={facebook_icon} alt="facebook" /></a>
               </li>
               <li>
-                <a href="https://meetup.com/hackademy_ai"><img src={meetup_icon} alt="meetup" /></a>
+                <a href="https://meetup.com/Hackademy-ai"><img src={meetup_icon} alt="meetup" /></a>
               </li>
             </ul>
           </div>
@@ -116,7 +116,7 @@ class IndexPage extends React.Component {
           </div>
           <div className="pull-right">
             <a href="https://bit.ly/hackademy_ai_tmi">
-              <img src={tmi_labs_icon} alt="the main ingredient labs" width="150"/>
+              <img src={tmi_labs_icon} alt="the main ingredient labs"/>
             </a>
           </div>
         </div>

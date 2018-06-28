@@ -53,7 +53,7 @@ button {
   font-weight: normal;
   font-size: 36pt;
 
-  border: 0;
+  border: none;
   height: 48pt;
 
   margin: 0px;
@@ -63,14 +63,28 @@ button {
     background-color: #FF0072;
     font-weight: bold;
   }
+
+  .span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+}
+
+.button:hover {
+  text-decoration: underline;
 }
 
 a {
-
   text-decoration: underline;
   color: #FF0072;
 
-  &:hover, &:active, &:visited {
+  &:hover {
+    color: white;
+  }
+
+  &:visited {
     color: #FF0072;
   }
 }
@@ -106,6 +120,8 @@ a {
 }
 
 .links {
+  margin-top: 60px;
+
   img {
     width: 48px;
     height: 48px;
@@ -122,3 +138,97 @@ a {
 // --------------------------------------------------------
 // MEDIA
 // --------------------------------------------------------
+
+// smaller
+//
+@media (max-width: 900px) {
+  h1 {
+    font-family: "Roboto";
+    font-weight:bold;
+    font-size: 40pt;
+    margin-top: -28pt;
+    margin-bottom: 0pt;
+  }
+
+  h2 {
+    font-family: "Roboto Mono";
+    font-weight:100;
+    font-size: 16pt;
+    margin-top: 12pt;
+    margin-bottom: 20pt;
+  }
+
+  button {
+    background-color: #777777;
+
+    font-family: "Roboto Mono";
+    font-weight: normal;
+    font-size: 20pt;
+
+    border: none;
+    height: 24pt;
+
+    margin: 0px;
+    margin-right: 16px;
+    margin-bottom: 4px;
+  }
+
+
+  .code {
+    margin-top: 16pt;
+    font-size: 9pt;
+
+    ul {
+      list-style: none;
+      line-height: normal;
+      padding: 0;
+      margin-top: 0;
+      margin: 0;
+      margin-left:-8px;
+      // padding-left: -16px;
+
+      li {
+        padding: 0;
+        margin: 0;
+        // margin-left: 16px;
+        padding-left: 16px;
+
+        span.string {
+          color: #9951ff;
+        }
+
+        span.number {
+          color: #F5A623;
+        }
+      }
+    }
+  }
+
+  .links {
+    margin-top: 16px;
+    margin-left: -20px;
+
+    img {
+      width: 32px;
+      height: 32px;
+    }
+  }
+
+  .footer {
+    h1 {
+      font-family: 'Patron';
+      font-weight: bold;
+
+      font-size: 12pt;
+      margin: 0;
+      margin-top:4px;
+      padding: 0;
+      line-height: 24px;
+    }
+
+    img {
+      width: 60px;
+    }
+
+  }
+}
