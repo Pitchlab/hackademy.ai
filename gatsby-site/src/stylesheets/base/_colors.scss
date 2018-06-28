@@ -1,0 +1,38 @@
+
+// TMI colors
+
+.black {
+  color: $black;
+}
+
+.yellow {
+  color: $yellow;
+}
+
+.purple {
+  color: $purple;
+}
+
+.white {
+  color: $white;
+}
+
+.blackbg {
+  background-color: $black;
+  color: $white;
+}
+
+.whitebg {
+  background-color: $white;
+  color: $black;
+}
+
+.yellowbg {
+  background-color: $yellow;
+  color: $black;
+}
+
+.purplebg {
+  background-color: $purple;
+  color: $white;
+}

@@ -1,0 +1,53 @@
+// @mixin declare-font-face($style-name, $file, $family, $category:"") {
+//   $filepath: $family + "/" + $file;
+//     @font-face {
+//       font-family: "#{$style-name}";
+//       src: font-url($filepath + ".eot");
+//       src: font-url($filepath + ".eot?#iefix") format('embedded-opentype'), font-url($filepath + ".woff") format('woff'), font-url($filepath + ".ttf")  format('truetype'), font-url($filepath + ".svg#" + $style-name + "") format('svg');
+//     }
+//   %#{$style-name} {
+//     font: {
+//       @if $category != "" {
+//         family: "#{$style-name}", #{$category};
+//       }
+//       @else {
+//         family: "#{$style-name}";
+//         weight: normal;
+//       }
+//     }
+//   }
+// }
+
+
+@font-face {
+    font-family: 'Patron';
+    src: url('../webfonts/PatronWEB-Regular.woff2') format('woff2'),
+        url('../webfonts/PatronWEB-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Patron';
+    src: url('../webfonts/PatronWEB-Bold.woff2') format('woff2'),
+        url('../webfonts/PatronWEB-Bold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Tiempos';
+    src: url('../webfonts/TiemposHeadlineWeb-Bold.woff2') format('woff2'),
+        url('../webfonts/TiemposHeadlineWeb-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+// @BUG the font is supposed to be ttf but it only shows up with woff2 format?
+//
+@font-face {
+    font-family: 'TMIIcons';
+    src: url('../webfonts/tmi_icons.ttf') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}

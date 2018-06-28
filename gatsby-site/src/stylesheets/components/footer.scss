@@ -1,0 +1,50 @@
+.footer {
+
+  background-color: #9951ff;
+
+  align-self: flex-end;
+  width: 100%;
+
+  h1 {
+    font-family: 'Patron';
+    font-weight: bold;
+
+    font-size: 32pt;
+  }
+
+  a {
+    color: white;
+    text-decoration: none;
+
+    &:hover, &:active, &:visited {
+      color:white;
+    }
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .border {
+    height:10px;
+    background: repeating-linear-gradient(
+      -45deg,
+      #9951ff,
+      #9951ff 10px,
+      #ffffff 10px,
+      #ffffff 20px
+    );
+  }
+
+  .pull-left {
+    float: left;
+    padding-left: 16px;
+  }
+  .pull-right {
+    float: right;
+  }
+
+  img {
+    margin: 16px;
+  }
+}

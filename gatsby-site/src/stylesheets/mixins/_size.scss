@@ -1,0 +1,28 @@
+/* Takes sizes in pixels and outputs both the pixel and rem values for the given property */
+@mixin size($property, $values...) {
+  $max: length($values);
+  $pxValues: "";
+  $remValues: "";
+  @for $i from 1 through $max {
+    $value: strip-unit(nth($values, $i));
+    @if $value == 0 {
+      $pxValues: #{$pxValues + $value};
+      $remValues: #{$remValues + $value / 16};
+    }
+    @else {
+      $pxValues: #{$pxValues + $value}px;
+      $remValues: #{$remValues + $value / 16}rem;
+    }
+    @if $i < $max {
+      $pxValues: #{$pxValues + " "};
+      $remValues: #{$remValues + " "};
+    }
+  }
+  @if $pxValues == $remValues {
+    #{$property}: $pxValues;
+  }
+  @else {
+    #{$property}: $pxValues;
+    #{$property}: $remValues;
+  }
+}
