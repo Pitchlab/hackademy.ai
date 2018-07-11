@@ -31,13 +31,13 @@ class IndexPage extends React.Component {
 
   handle_signup(e) {
     console.log("SIGNUP")
-    window.location="http://bit.ly/hackademy_ai_signup"
+    window.location="http://bit.ly/hackademy_apply"
     return null
   }
 
   handle_download(e) {
     console.log("DOWNLOAD")
-    window.location="http://bit.ly/hackademy_ai_guide"
+    top.location.href="http://bit.ly/hackademy_ai_guide"
     return null
   }
 
@@ -46,9 +46,9 @@ class IndexPage extends React.Component {
       <div className="site">
         <div className="wrapper">
           <h1>Hackademy.ai</h1>
-          <h2>edition #1: <a href="https://aiyprojects.withgoogle.com/">facial recognition</a> with <a href="https://aiyprojects.withgoogle.com/">Google AIY</a></h2>
+          <h2>edition #1: <a href="https://aiyprojects.withgoogle.com/">voice recognition</a> with <a href="https://aiyprojects.withgoogle.com/">Google AIY</a></h2>
           <div>
-            <button className="red button" onClick={this.handle_signup}><span>Sign up</span></button>
+            <button className="red button" onClick={this.handle_signup}><span>Apply now!</span></button>
             <button className="button" onClick={this.handle_download}><span>Download Guide</span></button>
           </div>
           <div className="code">
@@ -81,10 +81,10 @@ class IndexPage extends React.Component {
                     <span className="string">"location"</span>: <span className="string">"Amsterdam"</span>,
                   </li>
                   <li>
-                    <span className="string">"topic"</span>: <span className="string">"facial recognition"</span>,
+                    <span className="string">"topic"</span>: <span className="string">"voice recognition"</span>,
                   </li>
                   <li>
-                    <span className="string">"price"</span>: <span className="string">"free"</span>,
+                    <span className="string">"price"</span>: <span className="string">"&eur;15,-"</span>,
                   </li>
                   <li>
                     <span className="string">"max_participants"</span>: <span className="number">15</span>
@@ -97,7 +97,7 @@ class IndexPage extends React.Component {
           <div className="links">
             <ul>
               <li>
-                <a href="https://facebook.com/ai.hackademy"><img src={facebook_icon} alt="facebook" /></a>
+                <a href="https://www.facebook.com/ai.hackademy/"><img src={facebook_icon} alt="facebook" /></a>
               </li>
               <li>
                 <a href="https://meetup.com/Hackademy-ai"><img src={meetup_icon} alt="meetup" /></a>

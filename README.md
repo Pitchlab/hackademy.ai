@@ -1,1 +1,1 @@
-# hackademy.ai
+# Hackademy.ai
