@@ -5,21 +5,6 @@ import meetup_icon from "../../images/meetup.png";
 import facebook_icon from "../../images/facebook.png";
 import tmi_labs_icon from "../../images/tmi_labs_logo.png";
 
-var code = 'event = {\n'+
-  '\t"name" : "hackademy.ai",\n'+
-  '\t"about": "a practical ai hackathon ”\\ \n'+
-  '\t\t “for developers that want ”\\ \n'+
-  '\t\t "to get hands-on with ai"\n'+
-  '\t"date": "Friday July 20, 2018",\n'+
-  '\t"startTime":"2018-07-20T13:00:00+02:00",\n'+
-  '\t"endTime": "2018-07-20T19:00:00+02:00",\n'+
-  '\t"venue": "The Main Ingredient",\n'+
-  '\t"location": "Amsterdam",\n'+
-  '\t"topic": "facial recognition",\n'+
-  '\t"price": "free",\n'+
-  '\t"maxParticipants": 15\n'+
-'}'
-
 // class IndexPage() {
 class IndexPage extends React.Component {
 
@@ -87,7 +72,7 @@ class IndexPage extends React.Component {
                     <span className="string">"price"</span>: <span className="string">"&eur;15,-"</span>,
                   </li>
                   <li>
-                    <span className="string">"max_participants"</span>: <span className="number">15</span>
+                    <span className="string">"max_participants"</span>: <span className="number">15</span>,
                   </li>
                   <li>
                     <span className="string">"contact"</span>: <span className="string">"https://www.meetup.com/Hackademy-ai/"</span>
