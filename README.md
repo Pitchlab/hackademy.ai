@@ -25,7 +25,8 @@ event = {
 	"location": "Amsterdam",
 	"topic": "voice recognition",
 	"price": "&eur;15,-",
-	"max_participants": 15
+	"max_participants": 15,
+	"contact": "https://www.meetup.com/Hackademy-ai/"
 }
 ```
 
