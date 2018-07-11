@@ -89,6 +89,9 @@ class IndexPage extends React.Component {
                   <li>
                     <span className="string">"max_participants"</span>: <span className="number">15</span>
                   </li>
+                  <li>
+                    <span className="string">"contact"</span>: <span className="string">"https://www.meetup.com/Hackademy-ai/"</span>
+                  </li>
                 </ul>
                 &#125;
               </li>
