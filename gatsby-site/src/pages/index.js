@@ -16,7 +16,7 @@ class IndexPage extends React.Component {
 
   handle_signup(e) {
     console.log("SIGNUP")
-    window.location="http://bit.ly/hackademy_apply"
+    top.location="http://bit.ly/hackademy_apply"
     return null
   }
 
@@ -31,7 +31,7 @@ class IndexPage extends React.Component {
       <div className="site">
         <div className="wrapper">
           <h1>Hackademy.ai</h1>
-          <h2>edition #1: <a href="https://aiyprojects.withgoogle.com/">voice recognition</a> with <a href="https://aiyprojects.withgoogle.com/">Google AIY</a></h2>
+          <h2>edition #1: <a href="https://aiyprojects.withgoogle.com/" target="_blank">voice recognition</a> with <a href="https://aiyprojects.withgoogle.com/" target="_blank">Google AIY</a></h2>
           <div>
             <button className="red button" onClick={this.handle_signup}><span>Apply now!</span></button>
             <button className="button" onClick={this.handle_download}><span>Download Guide</span></button>
