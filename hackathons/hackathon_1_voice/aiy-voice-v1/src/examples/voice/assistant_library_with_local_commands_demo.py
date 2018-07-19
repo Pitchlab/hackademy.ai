@@ -1,4 +1,3 @@
-
 #!/usr/bin/env python3
 # Copyright 2017 Google Inc.
 #
@@ -57,7 +56,7 @@ def say_ip():
     aiy.audio.say('My IP address is %s' % ip_address.decode('utf-8'))
 
 def send_to_slack(text):
-    webhook_url = 'https://hooks.slack.com/services/<YOUR SLACK KEY HERE>'
+    webhook_url = 'https://hooks.slack.com/services/<KEY>'
     slack_data = {'text': text}
 
     response = requests.post(
@@ -72,7 +71,8 @@ def send_to_slack(text):
         )
 
 def send_to_ifttt(event):
-    webhook_url = 'https://maker.ifttt.com/trigger/'+event+'/with/key/<YOUR IFTTT KEY HERE>'
+    webhook_url = 'https://maker.ifttt.com/trigger/'+event+'/with/key/<KEY>'
+    print(webhook_url)
 
     response = requests.post(
         webhook_url,
@@ -85,6 +85,22 @@ def send_to_ifttt(event):
             % (response.status_code, response.text)
         )
 
+def sound(type):
+    print('playing',type)
+    path = '/home/pi/hackademy.ai/hackathons/hackathon_1_voice/resources/startrek/'
+    file = ''
+    if (type == 'acknowledge'):
+        file = "voiceinput4.wav"
+    elif (type == 'comply'):
+        file = "voiceinput3.wav"
+    elif (type == 'error'):
+        file = "scrclose1.wav"
+    elif (type == 'ready'):
+        file = "inputfailed1.wav"
+
+    print(path, file)
+    aiy.audio.play_wave(path+file)
+
 def process_event(assistant, event):
     status_ui = aiy.voicehat.get_status_ui()
     if event.type == EventType.ON_START_FINISHED:
@@ -92,46 +108,67 @@ def process_event(assistant, event):
         if sys.stdout.isatty():
             print('Say "OK, Google" then speak, or press Ctrl+C to quit...')
 
+    # The assistant got 'ok google' and now recognizes speech
+    #
     elif event.type == EventType.ON_CONVERSATION_TURN_STARTED:
+        sound('acknowledge')
         status_ui.status('listening')
 
+    # The assistant got some speech, let's see what it can do
+    #
     elif event.type == EventType.ON_RECOGNIZING_SPEECH_FINISHED and event.args:
         print('You said:', event.args['text'])
         text = event.args['text'].lower()
-        print('test:',text.find('slack'), text.find('Slack'))
         if text == 'power off':
             assistant.stop_conversation()
+            sound('comply')
             power_off_pi()
         elif text == 'reboot':
             assistant.stop_conversation()
+            sound('comply')
             reboot_pi()
         elif text == 'ip address':
             assistant.stop_conversation()
             say_ip()
         elif text == 'computer':
             assistant.stop_conversation()
-            aiy.audio.play_wave("voiceinput4.wav") # startrek computer sound
+            sound('acknowledge')
         elif text == 'lights on':
             assistant.stop_conversation()
-            send_to_ifttt('lights_on')
+            send_to_ifttt('robot1_on')
+            sound('comply')
         elif text == 'lights off':
             assistant.stop_conversation()
-            send_to_ifttt('lights_off')
+            send_to_ifttt('robot1_off')
+            sound('comply')
         elif text.find('slack')==0:
             assistant.stop_conversation()
             print('slacking!', text.lstrip('slack'))
             send_to_slack(text.lstrip('slack'))
+            sound('comply')
+        else:
+            # No command...
+            sound('ready')
 
+    # Once the command is finished, let the user know
+    #
     elif event.type == EventType.ON_END_OF_UTTERANCE:
+        # sound('comply')
         status_ui.status('thinking')
 
+    #
     elif (event.type == EventType.ON_CONVERSATION_TURN_FINISHED
           or event.type == EventType.ON_CONVERSATION_TURN_TIMEOUT
           or event.type == EventType.ON_NO_RESPONSE):
+        if (event.type == EventType.ON_NO_RESPONSE or event.type == EventType.ON_CONVERSATION_TURN_TIMEOUT):
+            sound('ready')
         status_ui.status('ready')
 
     elif event.type == EventType.ON_ASSISTANT_ERROR and event.args and event.args['is_fatal']:
         sys.exit(1)
+
+    elif event.type == EventType.ON_ASSISTANT_ERROR:
+        sound('error')
 
 def main():
     if platform.machine() == 'armv6l':
