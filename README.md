@@ -36,3 +36,17 @@ The first Hackathon has a small setting of 15 people. We really want to make it 
 Rest assured: in future hackathons we prefer not to use this system, so if we can't invite you this time, we really want to invite you the next time! 
 
 [Apply here!](https://bit.ly/hackademy_apply)
+
+## Getting Ready 
+We'll make use of e.g. Python and some other software. 
+
+* Read [Hackathon Setup](./Hackathon Setup.md) to get info on how to setup. 
+
+## Hackathon Specific
+
+* Hackathon 1: Voice 
+	* [Readme](./hackathons/hackathon_1_voice/Readme.md)
+	* [Specific Setup](./hackathons/hackathon_1_voice/Setup.md)
+
+
+[END]
