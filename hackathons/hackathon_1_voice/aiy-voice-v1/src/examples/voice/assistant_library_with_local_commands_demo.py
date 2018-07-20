@@ -146,9 +146,9 @@ def process_event(assistant, event):
             print('slacking!', text.lstrip('slack'))
             send_to_slack(text.lstrip('slack'))
             sound('comply')
-        else:
-            # No command...
-            sound('ready')
+        # else:
+        #     # No command...
+        #     sound('ready')
 
     # Once the command is finished, let the user know
     #
@@ -160,8 +160,8 @@ def process_event(assistant, event):
     elif (event.type == EventType.ON_CONVERSATION_TURN_FINISHED
           or event.type == EventType.ON_CONVERSATION_TURN_TIMEOUT
           or event.type == EventType.ON_NO_RESPONSE):
-        if (event.type == EventType.ON_NO_RESPONSE or event.type == EventType.ON_CONVERSATION_TURN_TIMEOUT):
-            sound('ready')
+        # if (event.type == EventType.ON_NO_RESPONSE or event.type == EventType.ON_CONVERSATION_TURN_TIMEOUT):
+        #     sound('ready')
         status_ui.status('ready')
 
     elif event.type == EventType.ON_ASSISTANT_ERROR and event.args and event.args['is_fatal']:
