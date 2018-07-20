@@ -40,7 +40,7 @@ Rest assured: in future hackathons we prefer not to use this system, so if we ca
 ## Getting Ready 
 We'll make use of e.g. Python and some other software. 
 
-* Read [Hackathon Setup](./Hackathon Setup.md) to get info on how to setup. 
+* [Hackathon Setup](./Hackathon_Setup.md) to get info on how to setup. 
 
 ## Hackathon Specific
 
