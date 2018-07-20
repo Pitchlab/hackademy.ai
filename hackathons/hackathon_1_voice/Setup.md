@@ -1,10 +1,10 @@
 # Software Setup 
 
-This Readme contains the software setup (SSD setup) that we followed to get the Google AIY Voice Kit v1 to work, and to use it without keyboard and mouse. 
+This Readme contains the software setup (SD setup) that we followed to get the Google AIY Voice Kit v1 to work, and to use it without keyboard and mouse. 
 
-## 1. SSD Disk Image setup
+## 1. SD Disk Image setup
 
-For this step, you'll need a micro SSD card and a cardreader. Make sure the SSD has 16GB or more. It will be formatted so make sure there's nothing valuable on there. 
+For this step, you'll need a micro SD card and a cardreader. Make sure the SD has 16GB or more. It will be formatted so make sure there's nothing valuable on there. 
 
 The kit we're working with is v1, and there is a new kit out, v2. That means some of the links in the booklet are now changed to the v2 version. 
 
@@ -13,9 +13,9 @@ Find the documentation here instead: [https://aiyprojects.withgoogle.com/voice-v
 
 Download the disk image. 
 
-Use [Etcher](https://etcher.io/) to burn the disk image to an SSD. 
+Use [Etcher](https://etcher.io/) to burn the disk image to an SD. 
 
-Don't insert the SSD in the Raspberry just yet :) we need to do some minor adjustments. 
+Don't insert the SD in the Raspberry just yet :) we need to do some minor adjustments. 
 
 ## 2. Ssh setup for Raspberry Pi
 
