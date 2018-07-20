@@ -1,6 +1,10 @@
 # Software Setup 
 
-This Readme contains the software setup (SD setup) that we followed to get the Google AIY Voice Kit v1 to work, and to use it without keyboard and mouse. 
+This file contains the software setup (SD setup) that we followed to get the Google AIY Voice Kit v1 to work, and to use it without keyboard and mouse. 
+
+This Setup is only necessary if you create your own SD for the Google Voice Kit. 
+
+The reason this was necessary for us was that we were only able to get Google Voice Kit v1 and most software online is now v2. 
 
 ## 1. SD Disk Image setup
 
