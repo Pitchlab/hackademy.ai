@@ -7,3 +7,6 @@ yarn.lock
 # Build directory
 /public
 .DS_Store
+
+/gatsby-site
+gatsby-site/
