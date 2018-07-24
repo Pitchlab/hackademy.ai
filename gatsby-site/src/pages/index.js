@@ -5,7 +5,6 @@ import meetup_icon from "../../images/meetup.png";
 import facebook_icon from "../../images/facebook.png";
 import tmi_labs_icon from "../../images/tmi_labs_logo.png";
 
-// class IndexPage() {
 class IndexPage extends React.Component {
 
   constructor(props) {
