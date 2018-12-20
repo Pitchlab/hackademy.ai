@@ -60,7 +60,7 @@ button {
   margin-right: 16px;
 
   &.red {
-    background-color: #FF0072;
+    background-color: $yellow;
     font-weight: bold;
   }
 
@@ -76,16 +76,20 @@ button {
   text-decoration: underline;
 }
 
+span.topic {
+  font-weight: bold;
+}
+
 a {
   text-decoration: underline;
-  color: #FF0072;
+  color: $yellow;
 
   &:hover {
     color: white;
   }
 
   &:visited {
-    color: #FF0072;
+    color: $yellow;
   }
 }
 
@@ -109,11 +113,11 @@ a {
       margin: 0;
 
       span.string {
-        color: #9951ff;
+        color: $purple;
       }
 
       span.number {
-        color: #F5A623;
+        color: $yellow;
       }
     }
   }
@@ -194,11 +198,11 @@ a {
         padding-left: 16px;
 
         span.string {
-          color: #9951ff;
+          color: $purple;
         }
 
         span.number {
-          color: #F5A623;
+          color: $yellow;
         }
       }
     }
