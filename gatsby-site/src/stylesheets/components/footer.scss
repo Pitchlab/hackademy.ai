@@ -1,6 +1,6 @@
 .footer {
 
-  background-color: #9951ff;
+  background-color: $purple;
   height: 100px;
 
   align-self: flex-end;
@@ -37,8 +37,8 @@
     height:10px;
     background: repeating-linear-gradient(
       -45deg,
-      #9951ff,
-      #9951ff 10px,
+      $purple,
+      $purple 10px,
       #ffffff 10px,
       #ffffff 20px
     );
